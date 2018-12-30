@@ -1,0 +1,24 @@
+package petriNet.state
+
+/**
+  * Class places depicts a 3-tuple consisting of the initial state, the final state
+  * and all the other possible states in the petri net.
+  * @param places
+  */
+class Places(val places: (State, State, List[State])) {
+
+  def getStates(): List[State] = {
+    return places._3
+  }
+
+  def getInitialState(): State = {
+    return places._1
+  }
+
+  def getFinalState(): State = {
+    return places._2
+  }
+
+
+  override def toString = s"Places(states = $getStates, initialState = $getInitialState, finalState = $getFinalState)"
+}
