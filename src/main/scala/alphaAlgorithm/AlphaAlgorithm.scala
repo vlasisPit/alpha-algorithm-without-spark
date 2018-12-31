@@ -12,10 +12,10 @@ object AlphaAlgorithm {
   def main(args: Array[String]): Unit = {
     val traceTools: TraceTools = new TraceTools()
     val logPath = "src/main/resources/readDataFiltered.csv"
-    val numOfTraces = 30
+    val numOfTraces = 2
     val percentage : Float = 2.0f //delete trace occurrences which are less than 1% from all traces
     val readAll : Boolean = false
-    val filtering : Boolean = true
+    val filtering : Boolean = false
 
     val traces : List[(String, List[String])] = traceTools.getTracesToInspect(logPath, numOfTraces, readAll, filtering, percentage)
 

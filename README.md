@@ -1,3 +1,7 @@
+# Purpose
+This is a non-Spark implementation of Alpha algorithm. The purpose of this implementation is to be compared with a Spark implementation of Alpha Algorithm.  
+Alpha algorithm using Apache Spark is at the following Bitbucket link `https://VlasisPi@bitbucket.org/VlasisPi/alphaalgorithm.git`
+
 # Alpha Algorithm - Process Mining Algorithm
 Alpha algorithm is one of the first Process Mining algorithms that discovers Workflow Nets (in form of Petri Nets) from logs (traces).  
 In order to discover a workflow net from logs, we need to establish the ordering between the transitions of this workflow. These relations will later be used in order to find places and connections between the transitions and these places.  
@@ -38,6 +42,3 @@ The implementation is divided into the following steps.
 
 # Testing
 Impementation of the algorithm is tested using unit tests and Databricks Community edition environment.
-
-# Purpose
-The purpose of this implementation is to compare a non-Spark implementation with an Apache Spark implementation.

@@ -129,4 +129,23 @@ class TraceTools {
     println("Number of traces to inspect = " + tracesToInspect.length)
     tracesToInspect
   }
+
+
+  def tracesDSFromLogFile(logPath: String) : List[(String, List[String])] = {
+    val bufferedSource = io.Source.fromFile(logPath)
+
+    val traces = bufferedSource.getLines
+      .map(x=>parseLine(x))
+      .toList
+
+    bufferedSource.close
+    traces
+  }
+
+  def parseLine(line: String) = {
+    val fields = line.split(" ")
+    val caseId = fields.head
+    val trace = fields.tail.toList
+    (caseId, trace)
+  }
 }
