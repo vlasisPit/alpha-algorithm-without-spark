@@ -73,8 +73,8 @@ class TraceTools {
     * If the events are A,B,C,D,E then pairs for computation are
     * AA, AB AC AD
     * BB BC BD
-    * AC AD
-    * CD
+    * CC CD
+    * DD
     * @param events
     * @return
     */
